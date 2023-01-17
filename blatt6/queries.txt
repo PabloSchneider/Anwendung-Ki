@@ -1,0 +1,27 @@
+1.)
+
+SELECT distinct ?person
+WHERE {
+    ?person a dbo:Person .
+    ?person dbo:significantProject ?machine .
+    ?machine dct:subject dbc:Cotton_gin .
+    ?machine a dbo:Software .
+} 
+
+
+2.) (in http://de.dbpedia.org/sparql)
+
+SELECT distinct ?date
+WHERE {
+    ?rollercoaster a dbo:RollerCoaster .
+    ?rollercoaster foaf:name "Tonnerre de Zeus"@de .
+    ?rollercoaster prop-de:eröffnung ?date .
+} 
+
+
+3.)
+
+SELECT DISTINCT ?country WHERE {
+    dbr:Kvíabryggja_Prison dbo:wikiPageWikiLink ?country .
+    ?country a dbo:Country
+}
